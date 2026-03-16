@@ -14,58 +14,40 @@
 :root{--gold:#b8860b;--bg:#faf7f2;--bg2:#f3ece1;--card:#fffdf9;--border:#e8dfd3;--text:#3d3428;--text2:#5a5046;--muted:#8b7e6a;--light:#a09585;--lightest:#bfb5a3;--red:#c44;--green:#3a7d5c;--blue:#2c6fa0;--serif:'Georgia',serif;--sans:'Segoe UI','Helvetica Neue',sans-serif}
 html,body{height:100%;font-family:var(--sans);background:var(--bg);color:var(--text)}
 body{display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}
-
-/* Header */
 .hdr{padding:16px 20px 12px;padding-top:max(16px,env(safe-area-inset-top));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:10}
 .hdr h1{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-0.3px}
 .hdr-right{display:flex;align-items:center;gap:8px}
 .proj-tag{font-size:11px;font-weight:600;padding:3px 8px;border-radius:5px;background:rgba(184,134,11,0.1);color:#8b6f00;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .back-btn{background:none;border:none;color:var(--muted);padding:6px;display:flex;cursor:pointer;border-radius:6px}
-
-/* Bottom Nav */
 .bnav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--border);padding:6px 8px;padding-bottom:max(6px,env(safe-area-inset-bottom));z-index:20}
 .bnav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 4px;border:none;background:none;color:var(--light);font-size:10px;font-weight:600;cursor:pointer;border-radius:8px;transition:all .15s}
 .bnav button.active{color:var(--gold);background:rgba(184,134,11,0.08)}
 .bnav button svg{width:22px;height:22px}
 .bnav .badge{background:var(--gold);color:#fff;font-size:9px;padding:1px 5px;border-radius:8px;margin-left:2px}
-
-/* Main content */
 .content{flex:1;overflow-y:auto;padding:16px 16px 80px;-webkit-overflow-scrolling:touch}
-
-/* Section headers */
 .sec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .sec-title{font-family:var(--serif);font-size:20px;font-weight:500}
 .btn{display:flex;align-items:center;gap:5px;padding:8px 14px;border:none;border-radius:8px;background:var(--gold);color:#fff;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
 .btn-sm{padding:6px 10px;font-size:12px}
 .btn-outline{background:none;border:1.5px solid var(--border);color:var(--muted)}
-
-/* Project cards */
 .proj-card{padding:16px;border-radius:12px;border:1px solid var(--border);background:var(--card);margin-bottom:10px;cursor:pointer;transition:transform .1s}
 .proj-card:active{transform:scale(0.98)}
 .proj-card h3{font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:4px}
 .proj-card p{font-size:13px;color:var(--muted);line-height:1.4}
 .proj-stats{display:flex;gap:8px;font-size:12px;color:var(--light);margin-top:10px;align-items:center;flex-wrap:wrap}
 .proj-card-top{display:flex;justify-content:space-between;align-items:start}
-
-/* Word cards */
 .word-card{padding:14px 16px;border-radius:10px;border:1px solid var(--border);background:var(--card);margin-bottom:8px;cursor:pointer;transition:transform .1s}
 .word-card:active{transform:scale(0.98)}
 .word-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
 .word-es{font-size:17px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px}
 .word-trans{font-size:14px;color:var(--text2);line-height:1.4}
 .word-meta{display:flex;gap:6px;align-items:center;margin-top:8px;flex-wrap:wrap}
-
-/* Confidence badges */
 .conf{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;white-space:nowrap}
 .conf-0{background:#c4432018;color:#c44}.conf-1{background:#d68a0018;color:#d68a00}
 .conf-2{background:#b8860b18;color:#b8860b}.conf-3{background:#5a8f3c18;color:#5a8f3c}
 .conf-4{background:#3a7d5c18;color:#3a7d5c}.conf-5{background:#2d6a4f18;color:#2d6a4f}
-
-/* Pills */
 .cat-pill{font-size:11px;padding:2px 7px;border-radius:4px;background:var(--bg2);color:#6b5e4f;font-weight:500}
 .gen-pill{font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;background:#d4e6f130;color:var(--blue)}
-
-/* Word detail */
 .detail-es{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .detail-inf{font-size:14px;color:var(--muted);margin:4px 0 16px}
 .detail-trans{display:flex;gap:10px;margin-bottom:14px}
@@ -77,45 +59,37 @@ body{display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-botto
 .detail-box p{font-size:14px;color:var(--text2);line-height:1.5}
 .detail-box .example{font-style:italic}
 .detail-actions{display:flex;gap:8px;margin-bottom:16px}
-
-/* Search */
 .search-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--card);margin-bottom:12px}
 .search-bar input{border:none;outline:none;background:none;font-size:15px;flex:1;color:var(--text);font-family:var(--sans)}
 .search-bar svg{color:var(--light);flex-shrink:0}
-
-/* Filter chip */
 .chip{display:inline-flex;align-items:center;gap:5px;padding:4px 10px 4px 12px;border-radius:16px;background:rgba(184,134,11,0.1);color:#8b6f00;font-size:12px;font-weight:500;margin-bottom:10px}
 .chip button{background:none;border:none;color:#8b6f00;padding:2px;display:flex;cursor:pointer}
-
-/* Category grid */
 .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .cat-card{padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--card);text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px}
 .cat-card .name{font-size:14px;font-weight:600;color:var(--text)}
 .cat-card .count{font-size:12px;color:var(--light)}
 .cat-bar{height:4px;border-radius:2px;background:var(--bg2);overflow:hidden}
 .cat-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--gold),#d4a420);transition:width .3s}
-
-/* Import */
 .import-info{font-size:14px;color:#6b5e4f;line-height:1.6;margin:6px 0 10px}
 .import-ex{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:11px;line-height:1.5;overflow:auto;color:var(--text2);font-family:'Courier New',monospace;white-space:pre-wrap;margin-bottom:10px}
 .import-ta{width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:13px;font-family:'Courier New',monospace;color:var(--text);resize:vertical;outline:none;line-height:1.4}
 .status{margin-top:10px;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:500}
 .status-ok{background:#d4edda;color:#155724}.status-err{background:#f8d7da;color:#721c24}
-
-/* Flashcard */
 .fc-wrap{display:flex;flex-direction:column;align-items:center;padding:20px 0;min-height:60vh;justify-content:center}
 .fc-prog{width:100%;height:5px;border-radius:3px;background:var(--bg2);overflow:hidden;margin-bottom:6px}
 .fc-prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),#d4a420);border-radius:3px;transition:width .3s}
 .fc-count{font-size:13px;color:var(--light);margin-bottom:14px;font-weight:500}
-.fc-lang-toggle{display:flex;gap:4px;margin-bottom:18px;background:var(--bg2);border-radius:8px;padding:3px}
-.fc-lang-btn{padding:6px 18px;border:none;border-radius:6px;background:transparent;cursor:pointer;font-size:13px;font-weight:600;color:var(--muted);transition:all .15s}
+.fc-toggles{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap;justify-content:center}
+.fc-toggle-group{display:flex;gap:3px;background:var(--bg2);border-radius:8px;padding:3px}
+.fc-toggle-label{font-size:10px;color:var(--light);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-right:4px;align-self:center;padding:0 4px}
+.fc-lang-btn{padding:6px 14px;border:none;border-radius:6px;background:transparent;cursor:pointer;font-size:12px;font-weight:600;color:var(--muted);transition:all .15s}
 .fc-lang-btn.active{background:var(--card);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,0.05)}
 .fc-card{width:100%;min-height:240px;border-radius:16px;border:1.5px solid var(--border);background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:28px;box-shadow:0 4px 20px rgba(61,52,40,0.04);transition:transform .1s}
 .fc-card:active{transform:scale(0.98)}
 .fc-front,.fc-back{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;width:100%}
 .fc-hint{font-size:10px;font-weight:700;color:var(--light);text-transform:uppercase;letter-spacing:1px}
 .fc-word{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--text)}
-.fc-word-back{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:8px}
+.fc-word-back{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
 .fc-tap{font-size:12px;color:var(--lightest);font-style:italic}
 .fc-btns{display:flex;gap:12px;margin-top:20px;width:100%}
 .fc-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:14px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;transition:all .1s}
@@ -125,12 +99,8 @@ body{display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-botto
 .fc-done{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
 .fc-done h2{font-family:var(--serif);font-size:26px;color:var(--text);margin:8px 0 4px}
 .fc-done p{color:var(--muted);font-size:14px}
-
-/* Practice card on projects page */
-.pract-all{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:1.5px solid rgba(184,134,11,0.2);border-radius:12px;background:rgba(184,134,11,0.04);margin-bottom:14px;cursor:pointer;font-size:14px}
-.pract-all:active{transform:scale(0.98)}
-
-/* Modal */
+.all-pract-banner{padding:14px 16px;border:1.5px solid rgba(184,134,11,.2);border-radius:12px;background:rgba(184,134,11,.04);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.all-pract-banner:active{transform:scale(0.98)}
 .modal-bg{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(61,52,40,0.35);backdrop-filter:blur(4px);z-index:50;display:flex;align-items:flex-end;justify-content:center}
 .modal{background:var(--card);border-radius:20px 20px 0 0;padding:24px 20px;padding-bottom:max(24px,env(safe-area-inset-bottom));width:100%;max-width:500px;max-height:85vh;overflow-y:auto;animation:slideUp .2s ease-out}
 @keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
@@ -141,111 +111,68 @@ body{display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-botto
 .modal .row>div{flex:1}
 .modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}
 .btn-cancel{padding:8px 16px;border:1px solid var(--border);border-radius:8px;background:none;color:var(--muted);font-size:13px;font-weight:500;cursor:pointer}
-
-/* Empty state */
 .empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 20px;gap:10px;text-align:center}
 .empty p{color:var(--muted);max-width:280px;line-height:1.5;font-size:14px}
-
-/* Icon button */
 .icon-btn{background:none;border:none;color:var(--light);padding:6px;display:flex;cursor:pointer;border-radius:6px}
-
-/* All practice */
-.all-pract-banner{padding:14px 16px;border:1.5px solid rgba(184,134,11,.2);border-radius:12px;background:rgba(184,134,11,.04);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
-
-/* Hide scrollbar */
 .content::-webkit-scrollbar{display:none}
 .content{scrollbar-width:none}
 </style>
 </head>
 <body>
 <div id="app"></div>
-
 <script>
-// ── Data ──
-const SKEY = 'mivocab-data';
-const SRI = [0,4,24,72,168,336,720];
-const CATS = ["Sustantivos","Verbos","Adjetivos","Adverbios","Frases","Expresiones","Preposiciones","Conjunciones","Otro"];
-const CONF_LABELS = ["Neu","Gesehen","Lernend","Geübt","Gefestigt","Gemeistert"];
-
+const SKEY='mivocab-data';
+const SRI=[0,4,24,72,168,336,720];
+const CATS=["Sustantivos","Verbos","Adjetivos","Adverbios","Frases","Expresiones","Preposiciones","Conjunciones","Otro"];
+const CL=["Neu","Gesehen","Lernend","Geübt","Gefestigt","Gemeistert"];
 function gid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
 function gnr(c){return Date.now()+SRI[Math.min(c,SRI.length-1)]*3600000}
-function load(){try{const d=localStorage.getItem(SKEY);return d?JSON.parse(d):{projects:[],words:[],categories:[...CATS]};}catch{return {projects:[],words:[],categories:[...CATS]};}}
+function load(){try{const d=localStorage.getItem(SKEY);return d?JSON.parse(d):{projects:[],words:[],categories:[...CATS]};}catch{return{projects:[],words:[],categories:[...CATS]};}}
 function save(d){try{localStorage.setItem(SKEY,JSON.stringify(d));}catch(e){console.error(e);}}
 
-// ── State ──
-let data = load();
-let state = {
-  tab: 'projects', // projects|words|categories|import|practice
-  project: null,
-  category: null,
-  search: '',
-  detail: null,
-  modal: null, // null|'addProject'|'addWord'|'editWord'
-  editData: null,
-  fc: null, // flashcard state
+let data=load();
+let state={tab:'projects',project:null,category:null,search:'',detail:null,modal:null,editData:null,fc:null};
+
+const SVG={
+  book:'<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15z"/></svg>',
+  cards:'<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="16" height="16" rx="2"/><path d="M6 2h12a2 2 0 012 2v12"/></svg>',
+  grid:'<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
+  imp:'<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>',
+  plus:'<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>',
+  back:'<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>',
+  search:'<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>',
+  trash:'<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m2 0v14a2 2 0 01-2 2H8a2 2 0 01-2-2V6h12z"/></svg>',
+  edit:'<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>',
+  x:'<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>',
+  check:'<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>',
+  star:'<svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
 };
 
-// ── SVGs ──
-const SVG = {
-  book: '<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15z"/></svg>',
-  cards: '<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="16" height="16" rx="2"/><path d="M6 2h12a2 2 0 012 2v12"/></svg>',
-  grid: '<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
-  imp: '<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>',
-  plus: '<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>',
-  back: '<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>',
-  search: '<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>',
-  trash: '<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m2 0v14a2 2 0 01-2 2H8a2 2 0 01-2-2V6h12z"/></svg>',
-  edit: '<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>',
-  x: '<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>',
-  check: '<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>',
-  star: '<svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
-};
-
-// ── Helpers ──
-function confBadge(l){
-  const c=Math.min(l||0,5);
-  return `<span class="conf conf-${c}">${CONF_LABELS[c]}</span>`;
-}
+function cb(l){const c=Math.min(l||0,5);return`<span class="conf conf-${c}">${CL[c]}</span>`;}
 function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
 
-// ── Actions ──
-function addProject(name,desc){
-  data.projects.push({id:gid(),name,description:desc,createdAt:Date.now()});
-  save(data); state.modal=null; render();
-}
-function delProject(id){
-  if(!confirm('Diesen Text und alle Wörter löschen?'))return;
-  data.projects=data.projects.filter(p=>p.id!==id);
-  data.words=data.words.filter(w=>w.projectId!==id);
-  if(state.project?.id===id){state.project=null;state.tab='projects';}
-  save(data);render();
-}
-function addWord(w){
-  data.words.push({id:gid(),projectId:state.project?.id||null,confidence:0,nextReview:Date.now(),lastReviewed:null,...w});
-  save(data);state.modal=null;render();
-}
-function updateWord(id,u){
-  data.words=data.words.map(w=>w.id===id?{...w,...u}:w);
-  save(data);state.modal=null;if(state.detail?.id===id)state.detail=data.words.find(w=>w.id===id);render();
-}
-function delWord(id){
-  if(!confirm('Wort löschen?'))return;
-  data.words=data.words.filter(w=>w.id!==id);
-  if(state.detail?.id===id)state.detail=null;
-  save(data);render();
-}
+function addProject(n,d){data.projects.push({id:gid(),name:n,description:d,createdAt:Date.now()});save(data);state.modal=null;render();}
+function delProject(id){if(!confirm('Diesen Text und alle Wörter löschen?'))return;data.projects=data.projects.filter(p=>p.id!==id);data.words=data.words.filter(w=>w.projectId!==id);if(state.project?.id===id){state.project=null;state.tab='projects';}save(data);render();}
+function addWord(w){data.words.push({id:gid(),projectId:state.project?.id||null,confidence:0,nextReview:Date.now(),lastReviewed:null,...w});save(data);state.modal=null;render();}
+function updateWord(id,u){data.words=data.words.map(w=>w.id===id?{...w,...u}:w);save(data);state.modal=null;if(state.detail?.id===id)state.detail=data.words.find(w=>w.id===id);render();}
+function delWord(id){if(!confirm('Wort löschen?'))return;data.words=data.words.filter(w=>w.id!==id);if(state.detail?.id===id)state.detail=null;save(data);render();}
 function doImport(txt){
-  try{
-    let p=JSON.parse(txt);if(!Array.isArray(p))p=[p];
-    const nw=p.map(w=>({id:gid(),projectId:state.project?.id||null,spanish:w.spanish||'',english:w.english||'',german:w.german||'',category:w.category||'Otro',example:w.example||'',note:w.note||'',gender:w.gender||'',infinitive:w.infinitive||'',confidence:0,nextReview:Date.now(),lastReviewed:null}));
-    data.words.push(...nw);save(data);return{ok:true,count:nw.length};
-  }catch{return{ok:false};}
+  try{let p=JSON.parse(txt);if(!Array.isArray(p))p=[p];
+  const nw=p.map(w=>({id:gid(),projectId:state.project?.id||null,spanish:w.spanish||'',english:w.english||'',german:w.german||'',category:w.category||'Otro',example:w.example||'',note:w.note||'',gender:w.gender||'',infinitive:w.infinitive||'',confidence:0,nextReview:Date.now(),lastReviewed:null}));
+  data.words.push(...nw);save(data);return{ok:true,count:nw.length};}catch{return{ok:false};}
 }
-function startPractice(words){
+
+// dir: 'toEs' = show EN/DE guess ES, 'fromEs' = show ES guess EN/DE, 'mix' = random per card
+function startPractice(words,dir){
   const due=words.filter(w=>!w.nextReview||w.nextReview<=Date.now());
   if(!due.length)return;
   const cards=[...due].sort(()=>Math.random()-0.5);
-  state.fc={cards,index:0,flipped:false,lang:'english',total:cards.length};
+  // For each card, assign a direction
+  const withDir=cards.map(c=>{
+    const d=dir==='mix'?(Math.random()<0.5?'toEs':'fromEs'):dir;
+    return{...c,dir:d};
+  });
+  state.fc={cards:withDir,index:0,flipped:false,lang:'english',dir:dir,total:withDir.length};
   state.tab='practice';render();
 }
 function answerCard(correct){
@@ -257,204 +184,201 @@ function answerCard(correct){
   render();
 }
 
-// ── Render ──
 function render(){
   const app=document.getElementById('app');
   const proj=state.project;
   const pWords=proj?data.words.filter(w=>w.projectId===proj.id):data.words;
   const dueCount=pWords.filter(w=>!w.nextReview||w.nextReview<=Date.now()).length;
-
-  let html='';
+  let h='';
 
   // Header
-  html+=`<div class="hdr"><div style="display:flex;align-items:center;gap:10px">`;
-  if(state.detail){
-    html+=`<button class="back-btn" onclick="state.detail=null;render()">${SVG.back}</button>`;
-  } else if(state.tab!=='projects'&&state.tab!=='practice'){
-    html+=`<button class="back-btn" onclick="state.project=null;state.tab='projects';state.category=null;state.search='';render()">${SVG.back}</button>`;
-  } else if(state.tab==='practice'){
-    html+=`<button class="back-btn" onclick="state.tab=state.project?'words':'projects';state.fc=null;render()">${SVG.back}</button>`;
-  }
-  html+=`<h1>Mi Vocabulario</h1></div>`;
-  html+=`<div class="hdr-right">`;
-  if(proj&&state.tab!=='practice')html+=`<span class="proj-tag">${esc(proj.name)}</span>`;
-  html+=`</div></div>`;
+  h+=`<div class="hdr"><div style="display:flex;align-items:center;gap:10px">`;
+  if(state.detail)h+=`<button class="back-btn" onclick="state.detail=null;render()">${SVG.back}</button>`;
+  else if(state.tab!=='projects'&&state.tab!=='practice')h+=`<button class="back-btn" onclick="state.project=null;state.tab='projects';state.category=null;state.search='';render()">${SVG.back}</button>`;
+  else if(state.tab==='practice')h+=`<button class="back-btn" onclick="state.tab=state.project?'words':'projects';state.fc=null;render()">${SVG.back}</button>`;
+  h+=`<h1>Mi Vocabulario</h1></div><div class="hdr-right">`;
+  if(proj&&state.tab!=='practice')h+=`<span class="proj-tag">${esc(proj.name)}</span>`;
+  h+=`</div></div>`;
 
-  // Content
-  html+=`<div class="content">`;
+  h+=`<div class="content">`;
 
-  // ── DETAIL VIEW ──
+  // DETAIL
   if(state.detail&&state.tab==='words'){
     const w=data.words.find(x=>x.id===state.detail.id)||state.detail;
-    html+=`<div class="detail-es">${esc(w.spanish)}`;
-    if(w.gender)html+=`<span class="gen-pill" style="font-size:12px;padding:3px 8px">${esc(w.gender)}</span>`;
-    html+=`</div>`;
-    if(w.infinitive)html+=`<div class="detail-inf">Infinitiv: <strong>${esc(w.infinitive)}</strong></div>`;
-    else html+=`<div style="height:16px"></div>`;
-    html+=`<div class="detail-actions">
-      <button class="btn btn-sm btn-outline" onclick="state.editData=${JSON.stringify(w).replace(/"/g,'&quot;')};state.modal='editWord';render()">${SVG.edit} Bearbeiten</button>
-      <button class="btn btn-sm btn-outline" onclick="delWord('${w.id}')">${SVG.trash} Löschen</button>
-    </div>`;
-    html+=`<div class="detail-trans"><div><label>English</label><span>${esc(w.english)}</span></div><div><label>Deutsch</label><span>${esc(w.german)}</span></div></div>`;
-    html+=`<div style="display:flex;gap:8px;align-items:center;margin-bottom:14px"><span class="cat-pill">${esc(w.category)}</span>${confBadge(w.confidence)}</div>`;
-    if(w.example)html+=`<div class="detail-box"><label>Ejemplo del texto</label><p class="example">"${esc(w.example)}"</p></div>`;
-    if(w.note)html+=`<div class="detail-box"><label>Hinweis</label><p>${esc(w.note)}</p></div>`;
+    h+=`<div class="detail-es">${esc(w.spanish)}`;
+    if(w.gender)h+=`<span class="gen-pill" style="font-size:12px;padding:3px 8px">${esc(w.gender)}</span>`;
+    h+=`</div>`;
+    h+=w.infinitive?`<div class="detail-inf">Infinitiv: <strong>${esc(w.infinitive)}</strong></div>`:`<div style="height:16px"></div>`;
+    h+=`<div class="detail-actions"><button class="btn btn-sm btn-outline" onclick="state.editData=${JSON.stringify(w).replace(/"/g,'&quot;')};state.modal='editWord';render()">${SVG.edit} Bearbeiten</button><button class="btn btn-sm btn-outline" onclick="delWord('${w.id}')">${SVG.trash} Löschen</button></div>`;
+    h+=`<div class="detail-trans"><div><label>English</label><span>${esc(w.english)}</span></div><div><label>Deutsch</label><span>${esc(w.german)}</span></div></div>`;
+    h+=`<div style="display:flex;gap:8px;align-items:center;margin-bottom:14px"><span class="cat-pill">${esc(w.category)}</span>${cb(w.confidence)}</div>`;
+    if(w.example)h+=`<div class="detail-box"><label>Ejemplo del texto</label><p class="example">"${esc(w.example)}"</p></div>`;
+    if(w.note)h+=`<div class="detail-box"><label>Hinweis</label><p>${esc(w.note)}</p></div>`;
   }
 
-  // ── PROJECTS ──
+  // PROJECTS
   else if(state.tab==='projects'){
-    html+=`<div class="sec-hdr"><h2 class="sec-title">Mis Textos</h2><button class="btn" onclick="state.modal='addProject';render()">${SVG.plus} Nuevo</button></div>`;
+    h+=`<div class="sec-hdr"><h2 class="sec-title">Mis Textos</h2><button class="btn" onclick="state.modal='addProject';render()">${SVG.plus} Nuevo</button></div>`;
     if(data.words.length>0){
       const allDue=data.words.filter(w=>!w.nextReview||w.nextReview<=Date.now()).length;
-      html+=`<div class="all-pract-banner" onclick="startPractice(data.words)"><div><strong>Practicar Todo</strong><div style="font-size:12px;color:var(--muted);margin-top:2px">${allDue} para repasar de ${data.words.length} total</div></div>${SVG.cards}</div>`;
+      h+=`<div class="all-pract-banner" onclick="showPracticeModal(data.words)"><div><strong>Practicar Todo</strong><div style="font-size:12px;color:var(--muted);margin-top:2px">${allDue} para repasar de ${data.words.length} total</div></div>${SVG.cards}</div>`;
     }
     if(!data.projects.length){
-      html+=`<div class="empty"><p style="font-size:38px">📚</p><p>Crea un proyecto para cada texto de tu tutor.</p></div>`;
+      h+=`<div class="empty"><p style="font-size:38px">📚</p><p>Crea un proyecto para cada texto de tu tutor.</p></div>`;
     } else {
       data.projects.forEach(p=>{
-        const pw=data.words.filter(w=>w.projectId===p.id);
-        const du=pw.filter(w=>!w.nextReview||w.nextReview<=Date.now()).length;
+        const pw=data.words.filter(w=>w.projectId===p.id);const du=pw.filter(w=>!w.nextReview||w.nextReview<=Date.now()).length;
         const av=pw.length?(pw.reduce((s,w)=>s+(w.confidence||0),0)/pw.length).toFixed(1):'0';
-        html+=`<div class="proj-card" onclick="state.project=data.projects.find(x=>x.id==='${p.id}');state.tab='words';render()">
+        h+=`<div class="proj-card" onclick="state.project=data.projects.find(x=>x.id==='${p.id}');state.tab='words';render()">
           <div class="proj-card-top"><h3>${esc(p.name)}</h3><button class="icon-btn" onclick="event.stopPropagation();delProject('${p.id}')">${SVG.trash}</button></div>
           ${p.description?`<p>${esc(p.description)}</p>`:''}
-          <div class="proj-stats"><span>${pw.length} palabras</span><span>·</span><span>${du} pendientes</span><span>·</span><span>${SVG.star} ${av}</span></div>
-        </div>`;
+          <div class="proj-stats"><span>${pw.length} palabras</span><span>·</span><span>${du} pendientes</span><span>·</span><span>${SVG.star} ${av}</span></div></div>`;
       });
     }
   }
 
-  // ── WORDS ──
+  // WORDS
   else if(state.tab==='words'&&!state.detail){
-    html+=`<div class="search-bar">${SVG.search}<input type="text" placeholder="Buscar..." value="${esc(state.search)}" oninput="state.search=this.value;render()"></div>`;
-    const filtered=pWords.filter(w=>{
-      const s=state.search.toLowerCase();
-      const ms=!state.search||w.spanish?.toLowerCase().includes(s)||w.english?.toLowerCase().includes(s)||w.german?.toLowerCase().includes(s);
-      const mc=!state.category||w.category===state.category;
-      return ms&&mc;
-    });
-    if(state.category)html+=`<div class="chip"><span>${esc(state.category)}</span><button onclick="state.category=null;render()">${SVG.x}</button></div>`;
-    html+=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><span style="font-size:13px;color:var(--light)">${filtered.length} palabras</span><button class="btn btn-sm" onclick="state.modal='addWord';render()">${SVG.plus} Añadir</button></div>`;
-    if(!filtered.length){
-      html+=`<div class="empty"><p style="font-size:32px">🔍</p><p>${state.search?'Sin resultados.':'Aún no hay palabras.'}</p></div>`;
-    } else {
-      filtered.forEach(w=>{
-        html+=`<div class="word-card" onclick="state.detail=data.words.find(x=>x.id==='${w.id}');render()">
-          <div class="word-top"><span class="word-es">${esc(w.spanish)}${w.gender?`<span class="gen-pill">${esc(w.gender)}</span>`:''}</span>${confBadge(w.confidence)}</div>
-          <div class="word-trans">EN: ${esc(w.english)}  ·  DE: ${esc(w.german)}</div>
-          <div class="word-meta"><span class="cat-pill">${esc(w.category)}</span>${w.infinitive?`<span style="font-size:11px;color:var(--muted)">→ ${esc(w.infinitive)}</span>`:''}</div>
-        </div>`;
-      });
-    }
+    h+=`<div class="search-bar">${SVG.search}<input type="text" placeholder="Buscar..." value="${esc(state.search)}" oninput="state.search=this.value;render()"></div>`;
+    const filtered=pWords.filter(w=>{const s=state.search.toLowerCase();return(!state.search||w.spanish?.toLowerCase().includes(s)||w.english?.toLowerCase().includes(s)||w.german?.toLowerCase().includes(s))&&(!state.category||w.category===state.category);});
+    if(state.category)h+=`<div class="chip"><span>${esc(state.category)}</span><button onclick="state.category=null;render()">${SVG.x}</button></div>`;
+    h+=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><span style="font-size:13px;color:var(--light)">${filtered.length} palabras</span><button class="btn btn-sm" onclick="state.modal='addWord';render()">${SVG.plus} Añadir</button></div>`;
+    if(!filtered.length){h+=`<div class="empty"><p style="font-size:32px">🔍</p><p>${state.search?'Sin resultados.':'Aún no hay palabras.'}</p></div>`;}
+    else{filtered.forEach(w=>{
+      h+=`<div class="word-card" onclick="state.detail=data.words.find(x=>x.id==='${w.id}');render()">
+        <div class="word-top"><span class="word-es">${esc(w.spanish)}${w.gender?`<span class="gen-pill">${esc(w.gender)}</span>`:''}</span>${cb(w.confidence)}</div>
+        <div class="word-trans">EN: ${esc(w.english)}  ·  DE: ${esc(w.german)}</div>
+        <div class="word-meta"><span class="cat-pill">${esc(w.category)}</span>${w.infinitive?`<span style="font-size:11px;color:var(--muted)">→ ${esc(w.infinitive)}</span>`:''}</div></div>`;
+    });}
   }
 
-  // ── CATEGORIES ──
+  // CATEGORIES
   else if(state.tab==='categories'){
-    html+=`<h2 class="sec-title" style="margin-bottom:14px">Categorías</h2><div class="cat-grid">`;
-    data.categories.forEach(c=>{
-      const ws=pWords.filter(w=>w.category===c);
-      const avg=ws.length?ws.reduce((s,w)=>s+(w.confidence||0),0)/ws.length:0;
-      html+=`<button class="cat-card" onclick="state.category='${c}';state.tab='words';render()">
-        <span class="name">${c}</span><span class="count">${ws.length} palabras</span>
-        <div class="cat-bar"><div class="cat-bar-fill" style="width:${avg/5*100}%"></div></div>
-      </button>`;
-    });
-    html+=`</div>`;
+    h+=`<h2 class="sec-title" style="margin-bottom:14px">Categorías</h2><div class="cat-grid">`;
+    data.categories.forEach(c=>{const ws=pWords.filter(w=>w.category===c);const avg=ws.length?ws.reduce((s,w)=>s+(w.confidence||0),0)/ws.length:0;
+      h+=`<button class="cat-card" onclick="state.category='${c}';state.tab='words';render()"><span class="name">${c}</span><span class="count">${ws.length} palabras</span><div class="cat-bar"><div class="cat-bar-fill" style="width:${avg/5*100}%"></div></div></button>`;
+    });h+=`</div>`;
   }
 
-  // ── IMPORT ──
+  // IMPORT
   else if(state.tab==='import'){
-    html+=`<h2 class="sec-title">Importar</h2>
-    <p class="import-info">Pega aquí el JSON que generamos en el chat de Claude:</p>
+    h+=`<h2 class="sec-title">Importar</h2>
+    <p class="import-info">Pega aquí el JSON del chat de Claude:</p>
     <pre class="import-ex">[{"spanish":"el sueño",
   "english":"the dream",
   "german":"der Traum",
   "category":"Sustantivos",
   "gender":"el",
   "example":"Tuvo un sueño.",
-  "note":"Also means 'sleep'"}]</pre>
+  "note":"Also means sleep"}]</pre>
     <textarea id="imp-ta" class="import-ta" rows="8" placeholder="JSON hier einfügen..."></textarea>
     <button class="btn" style="margin-top:10px;width:100%;justify-content:center" onclick="
-      const t=document.getElementById('imp-ta').value.trim();
-      if(!t)return;
-      const r=doImport(t);
-      const el=document.getElementById('imp-status');
+      const t=document.getElementById('imp-ta').value.trim();if(!t)return;
+      const r=doImport(t);const el=document.getElementById('imp-status');
       if(r.ok){document.getElementById('imp-ta').value='';el.className='status status-ok';el.textContent='✓ '+r.count+' palabras importadas.';el.style.display='block';}
       else{el.className='status status-err';el.textContent='Ungültiges JSON.';el.style.display='block';}
       setTimeout(()=>{el.style.display='none';render();},3000);
-    ">${SVG.imp} Importar</button>
-    <div id="imp-status" class="status" style="display:none"></div>`;
+    ">${SVG.imp} Importar</button><div id="imp-status" class="status" style="display:none"></div>`;
   }
 
-  // ── PRACTICE ──
+  // PRACTICE
   else if(state.tab==='practice'&&state.fc){
     const f=state.fc;
     if(f.index>=f.cards.length){
-      html+=`<div class="fc-wrap"><div class="fc-done">
-        <p style="font-size:52px">🎉</p><h2>¡Sesión completa!</h2><p>${f.total} palabras repasadas</p>
-        <button class="btn" style="margin-top:12px" onclick="state.tab=state.project?'words':'projects';state.fc=null;render()">Volver</button>
-      </div></div>`;
+      h+=`<div class="fc-wrap"><div class="fc-done"><p style="font-size:52px">🎉</p><h2>¡Sesión completa!</h2><p>${f.total} palabras repasadas</p>
+        <button class="btn" style="margin-top:12px" onclick="state.tab=state.project?'words':'projects';state.fc=null;render()">Volver</button></div></div>`;
     } else {
-      const card=f.cards[f.index];
-      const lc=data.words.find(w=>w.id===card.id)||card;
-      html+=`<div class="fc-wrap">
+      const card=f.cards[f.index];const lc=data.words.find(w=>w.id===card.id)||card;
+      const dir=card.dir; // 'toEs' or 'fromEs'
+      h+=`<div class="fc-wrap">
         <div class="fc-prog"><div class="fc-prog-fill" style="width:${f.index/f.total*100}%"></div></div>
-        <div class="fc-count">${f.index+1} / ${f.total}</div>
-        <div class="fc-lang-toggle">
-          <button class="fc-lang-btn ${f.lang==='english'?'active':''}" onclick="state.fc.lang='english';render()">EN</button>
-          <button class="fc-lang-btn ${f.lang==='german'?'active':''}" onclick="state.fc.lang='german';render()">DE</button>
-        </div>`;
-      if(!f.flipped){
-        html+=`<div class="fc-card" onclick="state.fc.flipped=true;render()"><div class="fc-front">
-          <span class="fc-hint">${f.lang==='english'?'English':'Deutsch'}</span>
-          <p class="fc-word">${esc(f.lang==='english'?lc.english:lc.german)}</p>
-          <span class="fc-tap">toca para revelar</span>
+        <div class="fc-count">${f.index+1} / ${f.total}</div>`;
+
+      // Language toggle (only relevant for toEs direction — choose which language to show)
+      if(dir==='toEs'){
+        h+=`<div class="fc-toggles"><div class="fc-toggle-group">
+          <button class="fc-lang-btn ${f.lang==='english'?'active':''}" onclick="state.fc.lang='english';render()">EN → ES</button>
+          <button class="fc-lang-btn ${f.lang==='german'?'active':''}" onclick="state.fc.lang='german';render()">DE → ES</button>
         </div></div>`;
       } else {
-        html+=`<div class="fc-card"><div class="fc-back">
-          <span class="fc-hint">Español</span>
-          <p class="fc-word-back">${esc(lc.spanish)}${lc.gender?`<span class="gen-pill">${esc(lc.gender)}</span>`:''}</p>
-          ${lc.infinitive?`<span style="font-size:13px;color:var(--muted)">Inf: ${esc(lc.infinitive)}</span>`:''}
-          <span class="cat-pill">${esc(lc.category)}</span>
-          <div style="font-size:13px;color:var(--muted);margin-top:6px">EN: ${esc(lc.english)} · DE: ${esc(lc.german)}</div>
-          ${lc.example?`<p style="font-size:12px;font-style:italic;color:var(--light);margin-top:8px;max-width:300px">"${esc(lc.example)}"</p>`:''}
-          ${lc.note?`<p style="font-size:11px;color:var(--gold);margin-top:4px">${esc(lc.note)}</p>`:''}
-        </div></div>
-        <div class="fc-btns">
-          <button class="fc-btn fc-wrong" onclick="answerCard(false)">${SVG.x} Noch nicht</button>
-          <button class="fc-btn fc-right" onclick="answerCard(true)">${SVG.check} Gewusst!</button>
-        </div>`;
+        h+=`<div class="fc-toggles"><div class="fc-toggle-group">
+          <button class="fc-lang-btn ${f.lang==='english'?'active':''}" onclick="state.fc.lang='english';render()">ES → EN</button>
+          <button class="fc-lang-btn ${f.lang==='german'?'active':''}" onclick="state.fc.lang='german';render()">ES → DE</button>
+        </div></div>`;
       }
-      html+=`</div>`;
+
+      if(!f.flipped){
+        if(dir==='toEs'){
+          // Show EN or DE, guess Spanish
+          h+=`<div class="fc-card" onclick="state.fc.flipped=true;render()"><div class="fc-front">
+            <span class="fc-hint">${f.lang==='english'?'English':'Deutsch'}</span>
+            <p class="fc-word">${esc(f.lang==='english'?lc.english:lc.german)}</p>
+            <span class="fc-tap">toca para revelar → Español</span></div></div>`;
+        } else {
+          // Show Spanish, guess EN or DE
+          h+=`<div class="fc-card" onclick="state.fc.flipped=true;render()"><div class="fc-front">
+            <span class="fc-hint">Español</span>
+            <p class="fc-word">${esc(lc.spanish)}${lc.gender?` <span class="gen-pill">${esc(lc.gender)}</span>`:''}</p>
+            ${lc.infinitive?`<span style="font-size:12px;color:var(--muted)">Inf: ${esc(lc.infinitive)}</span>`:''}
+            <span class="fc-tap">toca para revelar → ${f.lang==='english'?'English':'Deutsch'}</span></div></div>`;
+        }
+      } else {
+        // BACK of card
+        if(dir==='toEs'){
+          // Reveal: Spanish
+          h+=`<div class="fc-card"><div class="fc-back">
+            <span class="fc-hint">Español</span>
+            <p class="fc-word-back">${esc(lc.spanish)}${lc.gender?`<span class="gen-pill">${esc(lc.gender)}</span>`:''}</p>
+            ${lc.infinitive?`<span style="font-size:13px;color:var(--muted)">Inf: ${esc(lc.infinitive)}</span>`:''}
+            <span class="cat-pill">${esc(lc.category)}</span>
+            <div style="font-size:13px;color:var(--muted);margin-top:6px">EN: ${esc(lc.english)} · DE: ${esc(lc.german)}</div>
+            ${lc.example?`<p style="font-size:12px;font-style:italic;color:var(--light);margin-top:8px;max-width:300px">"${esc(lc.example)}"</p>`:''}
+            ${lc.note?`<p style="font-size:11px;color:var(--gold);margin-top:4px">${esc(lc.note)}</p>`:''}
+          </div></div>`;
+        } else {
+          // Reveal: EN or DE
+          h+=`<div class="fc-card"><div class="fc-back">
+            <span class="fc-hint">${f.lang==='english'?'English':'Deutsch'}</span>
+            <p class="fc-word-back">${esc(f.lang==='english'?lc.english:lc.german)}</p>
+            <span class="cat-pill">${esc(lc.category)}</span>
+            <div style="font-size:13px;color:var(--muted);margin-top:6px">${esc(lc.spanish)}${lc.gender?' ('+esc(lc.gender)+')':''}</div>
+            <div style="font-size:12px;color:var(--light);margin-top:4px">${f.lang==='english'?'DE: '+esc(lc.german):'EN: '+esc(lc.english)}</div>
+            ${lc.example?`<p style="font-size:12px;font-style:italic;color:var(--light);margin-top:8px;max-width:300px">"${esc(lc.example)}"</p>`:''}
+            ${lc.note?`<p style="font-size:11px;color:var(--gold);margin-top:4px">${esc(lc.note)}</p>`:''}
+          </div></div>`;
+        }
+        h+=`<div class="fc-btns">
+          <button class="fc-btn fc-wrong" onclick="answerCard(false)">${SVG.x} Nein</button>
+          <button class="fc-btn fc-right" onclick="answerCard(true)">${SVG.check} Ja!</button></div>`;
+      }
+      h+=`</div>`;
     }
   }
 
-  html+=`</div>`; // close content
+  h+=`</div>`; // content
 
-  // Bottom nav (hide during practice and detail)
+  // Bottom nav
   if(state.tab!=='practice'&&!state.detail&&state.project){
-    html+=`<nav class="bnav">
+    h+=`<nav class="bnav">
       <button class="${state.tab==='words'?'active':''}" onclick="state.tab='words';state.category=null;state.search='';render()">${SVG.book}<span>Palabras</span></button>
       <button class="${state.tab==='categories'?'active':''}" onclick="state.tab='categories';render()">${SVG.grid}<span>Categorías</span></button>
-      <button onclick="startPractice(data.words.filter(w=>w.projectId==='${state.project?.id||''}'))">${SVG.cards}<span>Practicar${dueCount?`<span class="badge">${dueCount}</span>`:''}</span></button>
+      <button onclick="showPracticeModal(data.words.filter(w=>w.projectId==='${state.project?.id||''}'))">${SVG.cards}<span>Practicar${dueCount?`<span class="badge">${dueCount}</span>`:''}</span></button>
       <button class="${state.tab==='import'?'active':''}" onclick="state.tab='import';render()">${SVG.imp}<span>Importar</span></button>
     </nav>`;
   }
 
-  // ── Modals ──
+  // Modals
   if(state.modal==='addProject'){
-    html+=`<div class="modal-bg" onclick="if(event.target===this){state.modal=null;render()}"><div class="modal">
+    h+=`<div class="modal-bg" onclick="if(event.target===this){state.modal=null;render()}"><div class="modal">
       <h3>Neuen Text anlegen</h3>
-      <label>Name</label><input id="m-pn" placeholder='z.B. "Los días del venado – Kap. 1"'>
+      <label>Name</label><input id="m-pn" placeholder='z.B. "Los días del venado"'>
       <label>Beschreibung</label><input id="m-pd" placeholder="Notizen...">
       <div class="modal-actions"><button class="btn-cancel" onclick="state.modal=null;render()">Abbrechen</button>
-      <button class="btn" onclick="const n=document.getElementById('m-pn').value.trim();if(n)addProject(n,document.getElementById('m-pd').value.trim())">Erstellen</button></div>
-    </div></div>`;
+      <button class="btn" onclick="const n=document.getElementById('m-pn').value.trim();if(n)addProject(n,document.getElementById('m-pd').value.trim())">Erstellen</button></div></div></div>`;
   }
-
   if(state.modal==='addWord'||state.modal==='editWord'){
     const i=state.modal==='editWord'?state.editData:null;
-    html+=`<div class="modal-bg" onclick="if(event.target===this){state.modal=null;render()}"><div class="modal">
+    h+=`<div class="modal-bg" onclick="if(event.target===this){state.modal=null;render()}"><div class="modal">
       <h3>${i?'Wort bearbeiten':'Wort hinzufügen'}</h3>
       <label>Español</label><input id="m-sp" value="${esc(i?.spanish||'')}">
       <div class="row"><div><label>English</label><input id="m-en" value="${esc(i?.english||'')}"></div><div><label>Deutsch</label><input id="m-de" value="${esc(i?.german||'')}"></div></div>
@@ -465,19 +389,37 @@ function render(){
       <div class="modal-actions"><button class="btn-cancel" onclick="state.modal=null;render()">Abbrechen</button>
       <button class="btn" onclick="
         const w={spanish:document.getElementById('m-sp').value.trim(),english:document.getElementById('m-en').value.trim(),german:document.getElementById('m-de').value.trim(),category:document.getElementById('m-cat').value,gender:document.getElementById('m-gn').value.trim(),infinitive:document.getElementById('m-inf').value.trim(),example:document.getElementById('m-ex').value.trim(),note:document.getElementById('m-nt').value.trim()};
-        if(!w.spanish)return;
-        ${i?`updateWord('${i.id}',w)`:'addWord(w)'};
-      ">${i?'Speichern':'Hinzufügen'}</button></div>
+        if(!w.spanish)return;${i?`updateWord('${i.id}',w)`:'addWord(w)'};
+      ">${i?'Speichern':'Hinzufügen'}</button></div></div></div>`;
+  }
+  if(state.modal==='practiceDir'){
+    const wordsRef=state._practWords==='all'?'data.words':`data.words.filter(w=>w.projectId==='${state.project?.id||''}')`;
+    const due=(state._practWords==='all'?data.words:data.words.filter(w=>w.projectId===state.project?.id)).filter(w=>!w.nextReview||w.nextReview<=Date.now()).length;
+    h+=`<div class="modal-bg" onclick="if(event.target===this){state.modal=null;render()}"><div class="modal">
+      <h3>Richtung wählen</h3>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:16px">${due} Wörter zum Üben</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <button class="btn" style="width:100%;justify-content:center;padding:14px" onclick="state.modal=null;startPractice(${wordsRef},'toEs')">EN / DE → Español</button>
+        <button class="btn" style="width:100%;justify-content:center;padding:14px" onclick="state.modal=null;startPractice(${wordsRef},'fromEs')">Español → EN / DE</button>
+        <button class="btn" style="width:100%;justify-content:center;padding:14px;background:var(--green)" onclick="state.modal=null;startPractice(${wordsRef},'mix')">🔀 Gemischt (beide)</button>
+      </div>
+      <div class="modal-actions"><button class="btn-cancel" onclick="state.modal=null;render()">Abbrechen</button></div>
     </div></div>`;
   }
 
-  app.innerHTML=html;
+  app.innerHTML=h;
 }
 
-// Initial render
-render();
+// Show direction picker before starting practice
+function showPracticeModal(words){
+  const due=words.filter(w=>!w.nextReview||w.nextReview<=Date.now());
+  if(!due.length){alert('Keine Wörter zum Üben!');return;}
+  state._practWords=words===data.words?'all':'project';
+  state.modal='practiceDir';
+  render();
+}
 
-// Register SW
+render();
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
 </script>
 </body>
